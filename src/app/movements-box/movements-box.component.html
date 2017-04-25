@@ -1,0 +1,13 @@
+<div *ngIf="client">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">{{client.name}}</h1>
+      <p class="lead">Se listan los movimientos...</p>
+    </div>
+  </div>
+
+  <app-movement-form [client]="client" (onCreate)="onCreate($event)"></app-movement-form>
+
+  <app-movement *ngFor="let movement of client.movements" [movement]="movement" (onDelete)="onDelete($event)"></app-movement>
+</div>

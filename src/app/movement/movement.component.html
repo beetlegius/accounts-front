@@ -1,0 +1,11 @@
+<div *ngIf="movement" class="card">
+  <div class="card-header">
+    {{movement.name}}
+  </div>
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>{{movement.ammount | currency}}</p>
+    </blockquote>
+    <a (click)="destroy()" class="btn btn-danger">Delete</a>
+  </div>
+</div>

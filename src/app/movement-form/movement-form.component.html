@@ -1,0 +1,9 @@
+<form class="form-inline" (submit)="add($event)">
+  <label for="name">Name</label>
+  <input autofocus type="text" [(ngModel)]="newMovement.name" name="name" class="form-control" placeholder="Name of the movement">
+
+  <label for="ammount">Ammount</label>
+  <input type="number" [(ngModel)]="newMovement.ammount" name="ammount" class="form-control" placeholder="Ammount">
+
+  <button type="submit">Add</button>
+</form>
